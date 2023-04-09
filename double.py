@@ -2,7 +2,7 @@ def encoding():
     phrase=input("Enter the Phrase to encode : ")
     encoded=[]
     
-    for i in range (2*len(phrase)) :
+    for i in range (len(phrase)) :
         shift=(pow(i+1,i))%26
         if (phrase[i%len(phrase)].isalpha()):
             if(ord(phrase[i%len(phrase)])+shift >ord('z')):
@@ -16,7 +16,7 @@ def decoding():
     phrase=input("Enter the Phrase to decode : ")
     decoded=[]
     
-    for i in range (len(phrase)//2) :
+    for i in range (len(phrase)) :
         shift=(pow(i+1,i))%26
         if (phrase[i].isalpha()):
             if(ord(phrase[i])-shift <ord('a')):
