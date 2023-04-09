@@ -8,6 +8,8 @@ def encoding():
             if(ord(phrase[i])+shift >ord('z')):
                 shift-=26
             encoded.append(chr(ord(phrase[i])+shift)) 
+        else :
+            encoded.append(phrase[i])
     print ("#"*50+"\n\t" + "".join(encoded) + "\n"+"#"*50)
 
 def decoding():
@@ -22,6 +24,8 @@ def decoding():
             if(ord(phrase[i])-shift <ord('a')):
                 shift-=26
             decoded.append(chr(ord(phrase[i])-shift))
+        else :
+            decoded.append(phrase[i])
     print ("#"*50+"\n\t Astr0n1_ + " + ''.join(decoded) + "\n"+"#"*50)
 
 
